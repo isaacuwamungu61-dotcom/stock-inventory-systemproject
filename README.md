@@ -1,1 +1,6 @@
-"# Project-L3sod-A" 
+Group Members
+---------------
+1. Banamwana olivier
+2. Igiraneza rienne
+3. Uwamungu isaac
+
