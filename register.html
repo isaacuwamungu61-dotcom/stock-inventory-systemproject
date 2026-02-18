@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | SIMS</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+<main class="auth-container">
+    <section class="auth-card">
+        <header>
+            <h1>SIMS</h1>
+            <p>Create Account</p>
+        </header>
+
+        <fieldset>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="regName">Full Name</label>
+                <input class="type-bar" type="text" id="regName" placeholder="Enter your Full Names">
+            </div>
+
+            <div class="form-group">
+                <label for="regEmail">Email</label>
+                <input class="type-bar" type="email" id="regEmail" placeholder="Create your New Email">
+            </div>
+
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input class="type-bar" type="password" id="regPassword" placeholder="Create your New Password">
+            </div>
+
+            <div class="form-group">
+                <label for="regConfirmPassword">Confirm Password</label>
+                <input class="type-bar" type="password" id="regConfirmPassword" placeholder="Confirm your New Password">
+            </div>
+
+            <button type="submit" class="btn-primary">Register</button>
+            <p id="registerMessage" class="message"></p>
+
+            <p class="redirect">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+        </form>
+
+        </fieldset>
+    </section>
+</main>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

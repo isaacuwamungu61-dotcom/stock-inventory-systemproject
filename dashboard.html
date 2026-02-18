@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | SIMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo-area">
+        <div class="logo-icon">📦</div>
+        <div>
+            <h2>SIMS</h2>
+            <small>Stock Inventory Management System</small>
+        </div>
+    </div>
+
+    <div class="user-area">
+        <span id="loggedInUser"></span>
+        <button id="logoutBtn" class="btn-danger">Logout</button>
+    </div>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <ul>
+            <li class="active" data-page="dashboard">Dashboard</li>
+            <li data-page="products">Products</li>
+            <li data-page="reports">Reports</li>
+            <li data-page="settings">Settings</li>
+        </ul>
+    </aside>
+
+    <main class="content">
+
+        <!-- DASHBOARD -->
+        <section id="dashboardPage" class="page">
+            <h1>Dashboard</h1>
+            <section class="cards">
+                <div class="card">
+                    <h3>Total Products</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+                <div class="card">
+                    <h3>In Stock</h3>
+                    <p id="inStock">0</p>
+                </div>
+                <div class="card">
+                    <h3>Out of Stock</h3>
+                    <p id="outStock">0</p>
+                </div>
+            </section>
+        </section>
+
+         <section id="productsPage" class="page hidden">
+            <div class="products-header">
+                <h3>Products</h3>
+                <button id="addProductBtn" class="btn-primary">Add Product</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="productsPage" class="page hidden">
+            <div class="products-header">
+                <h3>Products</h3>
+                <button id="addProductBtn" class="btn-primary">Add Product</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- REPORTS -->
+        <section id="reportsPage" class="page hidden">
+            <h2>Reports</h2>
+            <div class="card">
+                <p>Total Products: <strong id="reportTotal"></strong></p>
+                <p>In Stock: <strong id="reportStock"></strong></p>
+                <p>Out Of Stock: <strong id="reportOut"></strong></p>
+            </div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section id="settingsPage" class="page hidden">
+            <h2>Settings</h2>
+            <div class="card">
+                <p><strong>Name:</strong> <span id="settingName"></span></p>
+                <p><strong>Email:</strong> <span id="settingEmail"></span></p>
+                <p><strong>System:</strong> SIMS v1.0</p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- MODAL -->
+<section id="productModal" class="modal hidden">
+    <form id="productForm" class="modal-content">
+        <h3>Add Product</h3>
+
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productCategory" placeholder="Category">
+        <input type="number" id="productQuantity" placeholder="Quantity">
+        <input type="number" id="productPrice" placeholder="Price">
+
+        <button type="submit" class="btn-primary">Save</button>
+        <button type="button" id="closeModal" class="btn-secondary">Cancel</button>
+    </form>
+</section>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
